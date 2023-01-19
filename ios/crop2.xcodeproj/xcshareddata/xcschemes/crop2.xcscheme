@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "crop2.app"
-               BlueprintName = "crop2"
-               ReferencedContainer = "container:crop2.xcodeproj">
+               BuildableName = "ecompusell.app"
+               BlueprintName = "ecompusell"
+               ReferencedContainer = "container:ecompusell.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "crop2Tests.xctest"
-               BlueprintName = "crop2Tests"
-               ReferencedContainer = "container:crop2.xcodeproj">
+               BuildableName = "ecompusellTests.xctest"
+               BlueprintName = "ecompusellTests"
+               ReferencedContainer = "container:ecompusell.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "crop2.app"
-            BlueprintName = "crop2"
-            ReferencedContainer = "container:crop2.xcodeproj">
+            BuildableName = "ecompusell.app"
+            BlueprintName = "ecompusell"
+            ReferencedContainer = "container:ecompusell.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "crop2.app"
-            BlueprintName = "crop2"
-            ReferencedContainer = "container:crop2.xcodeproj">
+            BuildableName = "ecompusell.app"
+            BlueprintName = "ecompusell"
+            ReferencedContainer = "container:ecompusell.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
