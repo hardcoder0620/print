@@ -27,7 +27,7 @@ export default function App() {
       console.warn(image.path);
       setImgUri(image.path)
       //  RNPrint.print({ filePath: image.path})
-      sendPath(image.path)
+      sendPathImg(image.path)
 
 
 
@@ -35,19 +35,54 @@ export default function App() {
 
 
   }
+  var rnpath = RNFS.DocumentDirectoryPath + '/test.txt';
   function sendPath(path) {
-    RNFS.writeFile(path, 'base64')
-      .then(() => {
-        setImgUri(path)
-        console.warn("path", path)
-        // Print the file
-        printImg(path)
-      
+    RNFS.readFile(path, 'base64')
+      .then((elem) => {
+        // console.warn(elem)
+        const imagePath = `${RNFS.TemporaryDirectoryPath}docs.pdf`;
+        RNFS.writeFile(imagePath, elem, 'base64')
+          .then(() => {console.warn('Image converted to jpg and saved at ' + imagePath)
+
+          RNPrint.print({
+            filePath: imagePath,
+            type: 'pdf'
+          });
+        });
+
+        // setImgUri(path)
+        // console.warn("path", path)
+        // // Print the file
+        // printImg(path)
+
       })
       .catch((err) => console.error(err));
   }
 
-  function printImg(path){
+  function sendPathImg(path) {
+    RNFS.readFile(path, 'base64')
+      .then((elem) => {
+        // console.warn(elem)
+        const imagePath = `${RNFS.TemporaryDirectoryPath}img.jpg`;
+        RNFS.writeFile(imagePath, elem, 'base64')
+          .then(() => {console.warn('Image converted to jpg and saved at ' + imagePath)
+
+         console.warn("savedImgpath",imagePath)
+          RNPrint.print({
+            html: `<img   style = "width:100%"  src="https://media.istockphoto.com/id/1225517650/photo/single-big-oak-tree-in-meadow.jpg?s=612x612&w=is&k=20&c=50tUy8rezyP9MTGScoK0x1kHqVyNpnCeEe9mESjV9l4=" >`
+          })
+        });
+
+        // setImgUri(path)
+        // console.warn("path", path)
+        // // Print the file
+        // printImg(path)
+
+      })
+      .catch((err) => console.error(err));
+  }
+
+  function printImg(path) {
     RNPrint.print({
       filePath: path,
       type: 'image'
@@ -60,14 +95,16 @@ export default function App() {
       type: [DocumentPicker.types.pdf]
     })
     console.warn(res[0].uri)
-    RNPrint.print({
-      filePath: res[0].uri,
-      type: 'pdf'
-    });
+    sendPath(res[0].uri)
+
+    // RNPrint.print({
+    //   filePath: res[0].uri,
+    //   type: 'pdf'
+    // });
 
     // printHTML(res[0].uri)
   }
-  function printRemote(){
+  function printRemote() {
     RNPrint.print({
       filePath: 'http://digitalmotion.co.in/public/upload/documents/DIGITAL%20MOTION%20Interactive%20Flat%20Panel_v2225791657108398.pdf',
       type: 'pdf'
@@ -86,7 +123,7 @@ export default function App() {
         <Button title='Pick Docuemnt' onPress={() => { pickDocs() }} />
       </View>
       <View style={styles.viewBtn} >
-        <Button title='Pick Docuemnt' onPress={() => { printRemote() }} />
+        <Button title='Pick remote Docuemnt' onPress={() => { printRemote() }} />
       </View>
       {imgUri ?
         <View style={{ marginTop: 40, borderWidth: 1, borderColor: 'black', padding: 20, alignItems: 'center' }}>
