@@ -93,7 +93,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = "ecompusell";
+			name = "crop2";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -189,8 +189,8 @@
 			);
 			dependencies = (
 			);
-			name = "ecompusell";
-			productName = "ecompusell";
+			name = "crop2";
+			productName = "crop2";
 			productReference = 13B07F961A680F5B00A75B9A /* ecompusell.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -488,7 +488,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ecompusell/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "ecompusell";
+             INFOPLIST_KEY_CFBundleDisplayName = "crop2";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,7 +499,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "ecompusell";
+				PRODUCT_NAME = "crop2";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -514,7 +514,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "ecompusell/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "ecompusell";
+             INFOPLIST_KEY_CFBundleDisplayName = "crop2";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,7 +525,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "ecompusell";
+				PRODUCT_NAME = "crop2";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
