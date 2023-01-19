@@ -69,15 +69,14 @@ export default function App() {
 
          console.warn("savedImgpath",imagePath)
           RNPrint.print({
-            html: `<img   style = "width:100%"  src="https://media.istockphoto.com/id/1225517650/photo/single-big-oak-tree-in-meadow.jpg?s=612x612&w=is&k=20&c=50tUy8rezyP9MTGScoK0x1kHqVyNpnCeEe9mESjV9l4=" >`
+            
+            html: `<img  alt="image path" style = "width:100%"  src=${path} >`
           })
         });
-
         // setImgUri(path)
         // console.warn("path", path)
         // // Print the file
         // printImg(path)
-
       })
       .catch((err) => console.error(err));
   }
